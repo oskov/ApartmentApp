@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mariadb:
+    image: postgres:13
+    container_name: postgres-apartment-app
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres_apartment
+      - POSTGRES_USER=postgres_apartment
+      - POSTGRES_PASSWORD=postgres_apartment
+    ports:
+      - "7001:5432"

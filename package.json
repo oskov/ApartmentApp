@@ -1,13 +1,13 @@
 {
-  "name": "node-ts-template",
+  "name": "appartment-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-ts && npm run lint",
+    "build": "npm run lint && npm run build-ts ",
     "build-ts": "tsc",
     "debug": "npm run build && npm run watch-debug",
-    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "lint": "tsc --noEmit && eslint \"src/**/*.{js,ts}\" --quiet --fix",
     "serve": "node dist/index.js",
     "serve-debug": "nodemon --inspect dist/index.js",
     "start": "npm run serve",
@@ -18,11 +18,16 @@
     "watch-test": "npm run test -- --watchAll",
     "watch-ts": "tsc -w",
     "run": "npm run build && npm run start",
-    "fix": "eslint --fix"
+    "fix": "eslint --fix",
+    "runCrawler": "npm run build-ts && node ./dist/runCrawler.js"
   },
-  "author": "",
+  "author": "oskov",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "knex": "^0.95.6",
+    "pg": "^8.6.0",
+    "ss-lv-apartment-crawler": "^1.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.2",
