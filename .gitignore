@@ -1,7 +1,5 @@
 /.idea/
 /dist/
 /node_modules/
-/package-lock.json
 /data/
 /localDeploy/
-/data/
