@@ -8,4 +8,4 @@ sleep 5
 
 node ./localDeploy/dist/runCrawler.js
 
-docker stop mariadb-server-golang-retail
+docker stop postgres-apartment-app
