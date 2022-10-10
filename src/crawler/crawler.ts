@@ -41,9 +41,11 @@ export class Crawler {
                 const crawler = new SsLvCrawler(jobParams)
                 const jobPromise: Promise<JobResult> = crawler.run().then(async flats => {
                     if (flats.length) {
+                        const inserted = await this.flatRepository.addFlats(flats)
                         return {
                             status: JobStatus.Ok,
                             jobParams,
+                            inserted
                         }
                     } else {
                         return {

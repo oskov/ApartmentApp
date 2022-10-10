@@ -24,6 +24,7 @@
   "author": "oskov",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "knex": "^0.95.6",
     "pg": "^8.6.0",
     "ss-lv-apartment-crawler": "^1.0.0"

@@ -6,6 +6,6 @@ docker-compose up -d
 
 sleep 5
 
-node ./localDeploy/dist/runCrawler.js
+node ./localDeploy/runCrawler.js
 
-docker stop postgres-apartment-app
+docker-compose stop

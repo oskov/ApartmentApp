@@ -11,6 +11,6 @@ export class CityRepository extends Repository<City>{
     protected table = CITY_TABLE;
 
     async findAllEnabled(): Promise<City[]> {
-        return await this.queryKnex().select().where('enabled', true);
+        return this.queryKnex().select().where('enabled', true);
     }
 }

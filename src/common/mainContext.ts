@@ -2,10 +2,12 @@ import {Knex} from "knex";
 import {createKnexInstance} from "../db/knex";
 import {FlatRepository} from "./flats";
 import {CityRepository} from "./cities";
+import dotenv from 'dotenv'
 
 export class MainContext {
 
     constructor(private knexInstance: Knex) {
+        dotenv.config();
     }
 
     getKnex(): Knex {
